@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Student Registration Form</h1>
+    <form id="registerForm" method="POST" action="submit.php">
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" name="name" id="name" required>
+      </div>
+
+      <div class="form-group">
+        <label>USN:</label>
+        <input type="text" name="usn" id="usn" required>
+      </div>
+
+      <div class="form-group">
+        <label>Branch:</label>
+        <input type="text" name="branch" id="branch" required>
+      </div>
+
+      <div class="form-group">
+        <label>Semester:</label>
+        <select name="sem" id="sem" required>
+          <option value="">Select</option>
+          <option>1st Sem</option>
+          <option>2nd Sem</option>
+          <option>3rd Sem</option>
+          <option>4th Sem</option>
+          <option>5th Sem</option>
+          <option>6th Sem</option>
+          <option>7th Sem</option>
+          <option>8th Sem</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Gender:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Interested Domain:</label>
+        <select name="domain" id="domain" required>
+          <option value="">Select Domain</option>
+          <option>Artificial Intelligence</option>
+          <option>Cloud Computing</option>
+          <option>Web Development</option>
+          <option>Cyber Security</option>
+          <option>Data Science</option>
+          <option>Machine Learning</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Phone No:</label>
+        <input type="text" name="phone" id="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label>Address:</label>
+        <textarea name="address" id="address" required></textarea>
+      </div>
+
+      <button type="submit" id="submitBtn">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <div class="view-link">
+      <a href="view.php">📋 View All Registered Students</a>
+    </div>
+  </div>
+</body>
+</html>
